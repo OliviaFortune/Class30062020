@@ -6,7 +6,7 @@
   <option value="">-- Music --</option>
   <option value="JZ">Jazz</option>
   <option value="RB">R&B</option>
-  <option value="Rock">Rock</option>
+  <option value="RK">Rock</option>
 </select>
 
 <select id="MusicGenre"></select>
@@ -26,7 +26,7 @@ function myFunction() {
 var MusicsAndGenres = {};
 MusicsAndGenres['JZ'] = ['Jazz1', 'Jazz2', 'Jazz3'];
 MusicsAndGenres['RB'] = ['R&B1', 'R&B2', 'R&B3', 'R&B4'];
-MusicsAndGenres['DR'] = ['Rock1', 'Rock2', 'Rock3'];
+MusicsAndGenres['RK'] = ['Rock1', 'Rock2', 'Rock3'];
 
 function ChangeMusicList() {
   var MusicList = document.getElementById("Music");
