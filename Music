@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<select id="Music" onchange="ChangeMusicList()">
+  <option value="">-- Music --</option>
+  <option value="JZ">Jazz</option>
+  <option value="RB">R&B</option>
+  <option value="Rock">Rock</option>
+</select>
+
+<select id="MusicGenre"></select>
+
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    document.getElementById("demo").innerHTML = result;
+}
+</script>
+
+
+
+<script>
+var MusicsAndGenres = {};
+MusicsAndGenres['JZ'] = ['Jazz1', 'Jazz2', 'Jazz3'];
+MusicsAndGenres['RB'] = ['R&B1', 'R&B2', 'R&B3', 'R&B4'];
+MusicsAndGenres['DR'] = ['Rock1', 'Rock2', 'Rock3'];
+
+function ChangeMusicList() {
+  var MusicList = document.getElementById("Music");
+  var GenreList = document.getElementById("MusicGenre");
+  var selMusic = MusicList.options[MusicList.selectedIndex].value;
+
+  while (GenreList.options.length) {
+    GenreList.remove(0);
+  }
+
+
+  var Musics = MusicsAndGenres[selMusic];
+  if (Musics) {
+    var i;
+    for (i = 0; i < Musics.length; i++) {
+      var Music = new Option(Musics[i], i);
+      GenreList.options.add(Music);
+    }
+
+  }
+
+
+}
+
+
+
+
+</script>
+
+</body>
+</html>
